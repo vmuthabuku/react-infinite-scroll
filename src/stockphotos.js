@@ -21,8 +21,10 @@ export default function StockPhotos() {
             const response = await fetch(url)
             const data = await response.json()
             setPhotos(data)
+            setLoading(false)
             console.log(data)
         }catch(err){
+            setLoading(false)
             console.log(err)
         }
     }
