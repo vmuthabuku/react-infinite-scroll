@@ -60,8 +60,8 @@ export default function StockPhotos() {
     })
 
     React.useEffect(()=>{
-        setLoading(false)
         fetchImages()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page])
 
     const handleSubmit =(e)=>{
